@@ -1,0 +1,22 @@
+// discriminantedelaecuacioncuadratica.cpp: define el punto de entrada para la aplicación de la consola. //
+
+#include "stdafx.h" 
+#include <iostream>
+#include "conio.h" 
+#include "math.h"
+
+using namespace std; 
+void main () 
+{
+	float a, b, c, d; 
+	cout << "ingrese a:"; 
+	cin >> a; 
+	cout << "ingrese b:"; 
+	cin >> b; 
+	cout << "ingrese c:"; 
+	cin >> c; 
+	d=sqrt((pow(b,2))-4*a*c); 
+	cout << "el discriminante de la ecuacion cuadratica es:" << d; 
+	cout <<endl; 
+	getch (); 
+}
