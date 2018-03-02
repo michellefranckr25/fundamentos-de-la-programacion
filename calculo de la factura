@@ -1,0 +1,20 @@
+// calculodelafactura.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{
+	float factura,monto;
+	cout<<"ingrese monto:";
+	cin>>monto;
+	factura=monto*0.13;
+	cout<<"la factura tiene un monto de:"<<factura;
+	cout<<endl;
+	getch();
+	
+}
+
