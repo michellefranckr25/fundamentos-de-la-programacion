@@ -1,0 +1,26 @@
+// circunferenciaareavolumendeunaesfera.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float d,r,c,a,v;
+	cout<<"ingrese el valor de d: ";
+	cin>>d;
+	r=d/2;
+	c=2*3.1416*r;
+	a=4*3.1416*pow(r,2);
+	v=1.3333*3.1416*pow(r,3);
+	cout<<"el valor de c es: "<<c;
+	cout<<endl;
+	cout<<"el valor de a es: "<<a;
+	cout<<endl;
+	cout<<"el valor de v es: "<<v;
+	getch();
+}
