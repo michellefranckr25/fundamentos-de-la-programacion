@@ -1,0 +1,37 @@
+// menu_operacionesbasicas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main(){
+	int a,b,r,opcion;
+	cout<<"ingrese a y b: ";
+	cin>>a>>b;
+	do{
+		cout<<" 1.- suma "<<endl;
+		cout<<" 2.- resta "<<endl;
+		cout<<" 3.- multiplicacion "<<endl;
+		cout<<" 4.- division "<<endl;
+		cout<<" 0.- salir "<<endl;
+		cout<<" Elegir una opcion: "<<endl;
+		cin>>opcion;
+		switch(opcion){
+			case 1: r=a+b;break;
+			case 2: r=a-b;break;
+			case 3: r=a*b;break;
+			case 4: r=a/b;break;
+			case 0: cout<<"salir"<<endl;break;
+			     default: cout<<"error"<<endl;
+		}
+		if ((opcion>=1) && (opcion<=4))
+		cout<<" El resultado es: "<<r<<endl;
+		getch();
+		system("cls");
+	} while(opcion!=0);
+	getch();
+}
