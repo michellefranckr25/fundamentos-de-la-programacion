@@ -1,0 +1,25 @@
+// serie suma con exponente.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+
+void main(){
+	int s,n,x,i;
+	cout<<"ingrese el valor de x: "<<endl;
+	cin>>x;
+	cout<<"ingrese el valor de n: "<<endl;
+	cin>>n;
+	s=0;
+	i=1;
+	while(i<=n){
+		s=s+(powf(x,i));
+		i=i+1;
+	}
+	cout<<"el resultado es: "<<s;
+	getch();
+}
