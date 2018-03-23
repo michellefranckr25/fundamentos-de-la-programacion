@@ -1,0 +1,25 @@
+// serie cambio de signo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+ 
+using namespace std;
+
+void main(){
+	int n,s,i,signo;
+	float x;
+	cout<<"ingrese la cantidad a sumar: ";
+	cin>>n;
+	cout<<"ingrese x: ";
+	cin>>x;
+	s=0; signo=1;
+	for(i=1;i<=n;i++){
+		s=(pow(x,1))*signo;
+		signo=signo*(-1);
+	}
+	cout<<"la suma es: "<<s<<endl;
+	getch();
+}
