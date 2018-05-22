@@ -1,0 +1,52 @@
+// capicua.h
+#include "Stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargarvector(int v[],int n);
+bool capicua(int v[],int n);
+void mostrarvector(int v[],int n);
+
+void main(){
+	int v[MAX],n;
+	cout<<"Ingrese el tamano: ";
+	cin>>n;
+	bool r;
+	cargarvector(v,n);
+	r= capicua(v,n);
+	if(r==true)
+		cout<<"Es capicua"<<endl;
+	else
+		cout<<"No es capicua"<<endl;
+	mostrarvector(v,n);
+	getch();
+}
+
+void cargarvector(int v[], int n){
+	for(int i=0;i<n;i++){
+		cout<<"Vector["<<i<<"]=";
+		cin>>v[i];
+	}
+}
+
+bool capicua(int v[], int n){
+	int dim, j;
+	dim=n/2;
+	j=n-1;
+	for(int i=0;i<dim;i++){
+		if(v[i]!=v[j]){
+			return false;
+			j--;
+		}
+	}
+	return false;
+}
+
+void mostrarvector(int v[],int n){
+	for(int i=0;i<n;i++)
+		cout<<"Vector["<<i<<"]="<<v[i];
+}
+
