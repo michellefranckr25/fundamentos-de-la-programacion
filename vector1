@@ -1,0 +1,52 @@
+// Vector1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargarVector(double V[ ],int n);
+void mostrarVector(double V[ ],int n);
+double promedio(double V[ ],int n);
+
+void main() {
+	double V[MAX],prom;
+	int n;
+	do{
+		cout<<"Ingrese n: "<<endl;
+		cin>>n;
+	}while(n<=0||n>MAX);
+	cargarVector(V,n);
+	mostrarVector(V,n);
+	prom=promedio(V,n);
+	cout<<"El promedio es: "<<prom<<endl;
+	for(int i=0;i<n;i++)
+		cout<<"Diferencia"<<i<<":"<<V[i]-prom;
+	getch();
+}
+
+void cargarVector (double V[],int n){
+	for(int i=0;i<n;i++){
+		cout<<"Vector["<<i<<"]=";
+		cin>>V[i];
+	}
+}
+
+void mostrarVector (double V[],int n){
+	for(int i=0;i<n;i++){
+		cout<<"Vector["<<i<<"]="<<V[i];
+	}
+}
+
+double promedio (double V[],int n){
+	int s,prom;
+	s=0;
+	for(int i=0;i<n;i++){
+		s=s+V[i];
+	}
+	prom=s/n;
+	 return prom;
+}
