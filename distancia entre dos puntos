@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+float distancia(float Xa,float Xb,float Ya,float Yb,float D);
+
+void main(){
+	float D,Xa,Xb,Ya,Yb;
+	cout<<"ingrese el valor de Xa,Xb,Ya,Yb: "<<endl;
+	cin>>Xa>>Xb>>Ya>>Yb;
+	distancia(Xa,Xb,Ya,Yb,D);
+	cout<<D<<endl;
+	getch();
+}
+float distancia(float Xa,float Xb,float Ya,float Yb,float D){
+	D=sqrt((pow((Xa-Xb),2))+(pow((Ya-Yb),2)));
+	return D;
+}
