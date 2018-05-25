@@ -1,0 +1,27 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+
+using namespace std;
+
+float serie(int b[],int n);
+
+void main(){
+    int b,n,i;
+    float s;
+    cout<<"ingrese el valor de b y n: "<<endl;
+    cin>>b>>n;
+    s=serie(b,n);
+    cout<<s<<endl;
+    getch();
+}
+float serie(int b[], int n){
+    float s=0;
+    int signo=1;
+    for (int i=1;i<n;i++){
+        s=s+(pow(b,i)*signo);
+        signo=signo*(-1);
+        return s;
+    }
