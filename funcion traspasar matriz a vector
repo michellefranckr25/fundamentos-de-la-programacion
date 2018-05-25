@@ -1,0 +1,10 @@
+void traspasar(int n,int m,int MAT[MAX][MAX],int &v,int vec[]){
+   int i,j,k=0;
+   for(i=0;i<n;i++)
+   {  for(j=i;j<m;j++)
+      {  vec[k]=MAT[i][j];
+         k++;
+       }
+    }
+ v=m*n;
+ }
