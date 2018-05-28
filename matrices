@@ -1,0 +1,93 @@
+// ()Matrices.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+#define MAX 20
+
+using namespace std;
+
+void mostrarMat (int MAT [MAX][MAX], int m, int n);
+void cargarMat (int MAT [MAX][MAX], int m, int n);
+float promedio (int MAT [MAX][MAX], int m, int n);
+int mayor (int MAT [MAX][MAX], int m, int n);
+
+void main()
+{ int matriz [MAX][MAX], fil, col, may, opcion;
+    float prom;
+do{
+cout<<"ingrese el numero de filas: ";
+cin>>fil;
+}while((fil<=0) || (fil>MAX));
+
+do{
+cout<<"ingrese el numero de columnas: ";
+cin>>col;
+}while((col<=0) || (col>MAX));
+
+do{
+cout<<"\t-----MENU-----\n";
+cout<<"1. Cargar matriz\n";
+cout<<"2. Mostrar matriz\n";
+cout<<"3. Promedio de la matriz\n";
+cout<<"4. Mayor de la matriz\n";
+cout<<"0. Salir\n";
+cout<<"Opcion: ";
+cin>>opcion;
+switch(opcion)
+{case 1 : cargarMat(matriz,fil,col);
+  break;
+case 2 : mostrarMat(matriz,fil,col);
+  break;
+case 3 : prom=promedio(matriz,fil,col);
+      cout<<"El valor promedio es:  "<<prom;
+  break;
+case 4 : cout<<"El mayor es:  "<<mayor(matriz,fil,col);
+  break;
+case 0 : cout<<"Error";
+      break;
+}
+getch();
+system("cls");  //limpia la pantalla
+}while(opcion!=0);
+
+_getch ();
+}
+
+void mostrarMat (int MAT [MAX][MAX], int m, int n)
+{int i,j;
+ for(i=0; i<m; i++)
+for(j=0; j<n; j++)
+{cout<<"MAT["<<i<<"]["<<j<<"]=  ";
+  cout<<MAT[i][j]<<endl;
+         }
+}
+void cargarMat (int MAT [MAX][MAX], int m, int n)
+{int i,j;
+ for(i=0; i<m; i++)
+for(j=0; j<n; j++)
+{cout<<"MAT["<<i<<"]["<<j<<"]=  ";
+  cin>>MAT[i][j];
+         }
+}
+float promedio (int MAT [MAX][MAX], int m, int n)
+{float prom,s=0;
+ int i,j;
+ for(i=0; i<m; i++)
+for(j=0; j<n; j++)
+{s=s+MAT[i][j];
+         prom=s/(m*n);
+        }
+ return (prom);
+}
+int mayor (int MAT [MAX][MAX], int m, int n)
+{int may=MAT[0][0], j, i;
+ for(i=0; i<m; i++)
+for(j=0; j<n; j++)
+if(MAT[i][j]>may)
+    may=MAT[i][j];
+ return (may);
+}
