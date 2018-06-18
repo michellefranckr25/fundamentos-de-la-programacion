@@ -1,0 +1,760 @@
+// proyecto tecnoupsa.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdlib.h"
+#include "conio.h"
+#include <iostream>
+#include "stdio.h"
+#include "ctype.h"
+#include "string.h"
+
+using namespace std;
+int validar_num(char numero[50]);
+void main ()
+{int op,op1,op2,op3,op4,op5,op6,op7,op8,op9,op10,op11,op12,cont,sw,num;
+ char numero[50];
+ system ("cls");
+ system("color F1");
+ cout<<"******************** BIENVENIDOS ********************"<<endl;
+ do
+ {	do{
+		cout<<"------------------- MENU PRINCIPAL -------------------"<<endl;
+		cout<<"Por favor ingrese la ciudad en la que desea saber la informacion"<<endl;
+		cout<<"[1] Santa Cruz"<<endl;
+		cout<<"[2] La Paz"<<endl;
+		cout<<"[3] Cochabamba"<<endl;
+		cout<<"[4] Sucre"<<endl;
+		cout<<"Escoja una de las anteriores opciones: ";
+		fflush(stdin);
+	    gets_s(numero);
+	    sw = validar_num(numero);
+	    if (sw==0)
+		{cout<<"Numero invalido"<<endl;
+		num = atoi(numero);
+		cout<<num;
+		}
+		else
+		{
+		cout<<"Numero Invalido"<<endl;
+		}
+		system("pause");
+		cout<<"Ingrese la opcion que corresponde: ";
+		cin>>op;
+		system ("cls");
+	  }while(op<0 || op>4);
+ system ("cls");
+ system("color 2F");
+ switch(op)
+ {case 1:
+	{	cout<<"****************SANTA CRUZ ***************"<<endl;
+		do
+		{cout<<"---------- MENU PRINCIPAL ----------"<<endl;
+		 cout<<"[1] Cine"<<endl;
+		 cout<<"[2] Museos"<<endl;
+		 cout<<"[3] Salir"<<endl;
+		 cout<<"Escoja una de las anteriores opciones: ";
+		 fflush(stdin);
+		 gets_s(numero);
+	     sw = validar_num(numero);
+	     if (sw==0)
+		 {cout<<"Numero invalido"<<endl;
+		 num = atoi(numero);
+		 cout<<num;
+		 }
+		 else
+		 {
+		 cout<<"Numero Invalido"<<endl;
+		 }
+		 system("pause");
+		 cout<<"Ingrese la opcion que corresponde: ";
+		 cin>>op1;
+		}while(op1<0 || op1>3);
+		system ("cls");
+		switch(op1)
+		{case 1:
+			{cout<<"*************** CINES ***************"<<endl;
+			do 
+			{do
+			 {cout<<"[1] Cine Center "<<endl;
+			  cout<<"[2] Bella Vista "<<endl;
+			  cout<<"[3] Multicine "<<endl;
+			  cout<<"[4] CineMark "<<endl;
+			  cout<<"[5] Salir "<<endl;
+			  cout<<"Escoja una de las anteriores opciones: ";
+			  fflush(stdin);
+			  gets_s(numero);
+			  sw = validar_num(numero);
+			  if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				num = atoi(numero);
+				cout<<num;
+				}
+			  else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+			system("pause");
+			cout<<"Ingrese la opcion que corresponde: ";
+			cin>>op2;
+			 }while(op2<0 || op2>5);
+			 system ("cls");
+			 switch(op2)
+			 {case 1:
+				{cout<<"El cine center se encuentra ubicado: "<<endl;
+				 cout<<"2do Anillo entre René Moreno y Monseñor Santisteban, Zona El Trompillo"<<endl;
+				 cout<<"Los siguientes horarios son fijos durante este mes"<<endl;
+				 //system("C:\\Users\\Lolii\\Desktop\\CineCenter.jpg");
+				 break;
+				}
+			 case 2:
+				 {cout<<"El cine bella vista se encuentra ubicado: "<<endl;
+				  cout<<"Av. Ana Barbara"<<endl;
+				  cout<<"Los siguientes horarios son fijos durante este mes"<<endl;
+				  //system("");
+				  break;
+				 }
+			 case 3:
+				 {cout<<"El multicine se encuentra ubicado: "<<endl;
+				  cout<<"Av. Banzer y cuarto anillo"<<endl;
+				  cout<<"Los siguientes horarios son fijos durante este mes"<<endl;
+				  //system("");}
+				  break;
+				 }
+			 case 4:
+				 {cout<<"El cinemark se encuentra ubicado: "<<endl;
+				  cout<<"Av costanera, 4to anillo"<<endl;
+				  cout<<"Los siguientes horarios son fijos durante este mes"<<endl;
+				  //system("");
+				  break;
+				 }
+			 case 5:
+				 {cout<<"El cinemark se encuentra ubicado: "<<endl;
+				  cout<<"Av costanera, 4to anillo"<<endl;
+				  cout<<"Los siguientes horarios son fijos durante este mes"<<endl;
+				  //system("");
+				  break;
+				 }
+			 default: {cout<<"Opcion invalida."<<endl;
+					   break;
+					  }
+			 }
+			}while(op2>6);//termina lo que es el menu del cine de scz
+			break;
+			}
+		case 2:
+			{cout<<"*************** MUSEOS ***************"<<endl;
+			do
+			{do
+				{cout<<"[1] Museo de Arte Contemporaneo"<<endl;
+				 cout<<"[2] Museo Guarani"<<endl;
+				 cout<<"[3] Museo Noel Kempff"<<endl;
+				 cout<<"[4] Casa Municipal de la Cultura"<<endl;
+				 cout<<"[5] Centro Cultural Melchor Pinto"<<endl;
+				 cout<<"[6] Museo Historico Militar"<<endl;
+				 cout<<"[7] Salir"<<endl;
+				 cout<<"Escoja una de las anteriores opciones: ";
+				 fflush(stdin);
+				 gets_s(numero);
+				 sw = validar_num(numero);
+				 if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				 num = atoi(numero);
+				 cout<<num;
+				}
+				else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+				system("pause");
+				cout<<"Ingrese la opcion que corresponde: ";
+				cin>>op3;
+				}while(op3<0 || op3>10);
+				system("cls");
+			switch(op3)
+				{case 1:
+					{cout<<"El de arte contemporaneo se encuentra: "<<endl;
+					 cout<<"Av Marcelo Terceros Banzer."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             09:00 - 12:00           *"<<endl;
+					 cout<<"*             15:00 - 20:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 2:
+					 {cout<<"El museo guarani se encuentra: "<<endl;
+					 cout<<"Calle Sucre esquina, Potosi."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             09:30 - 12:30           *"<<endl;
+					 cout<<"*             15:00 - 18:30           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 3:
+					  {cout<<"El museo de Noel Kempff se encuentra: "<<endl;
+					 cout<<"Av. Irala # 565 entre Av. Ejercito Nacional y, Av. Velarde."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             08:00 - 12:00           *"<<endl;
+					 cout<<"*             15:00 - 18:30           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 4:
+					  {cout<<"La casa municipal de la cultura se encuentra: "<<endl;
+					  cout<<"Celle Libertad #65."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             13:00 - 20:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 5:
+					   {cout<<"El centro cultural Melchor Pinto se encuentra: "<<endl;
+					   cout<<"Calle Sucre #50."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             08:00 - 20:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 6:
+					  {cout<<"El museo historico militar se encuentra: "<<endl;
+					  cout<<"Calle Bolivar #402"<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-viernes:           *"<<endl;
+					 cout<<"*             08:00 - 14:00           *"<<endl;
+					 cout<<"*             15:00 - 17:30           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 7:
+					 {cout<<"Salir"<<endl;
+					 break;
+					 }
+				 default: break;
+
+				}
+			}while(op3>7);
+			break;
+			}//termina lo que es el menu de museos de scz
+		}//termina todo el menu de scz
+		}system("cls");
+		
+	case 2:
+		
+		system("color 4A");
+		{	cout<<"****************LA PAZ ***************"<<endl;
+		do
+		{do
+		 {cout<<"---------- MENU PRINCIPAL ----------"<<endl;
+		 cout<<"[1] Cine"<<endl;
+		 cout<<"[2] Museos"<<endl;
+		 cout<<"[3] Salir"<<endl;
+		 cout<<"Escoja una de las anteriores opciones: ";
+		 fflush(stdin);
+		 gets_s(numero);
+	     sw = validar_num(numero);
+	     if (sw==0)
+		 {cout<<"Numero invalido"<<endl;
+		 num = atoi(numero);
+		 cout<<num;
+		 }
+		 else
+		 {
+		 cout<<"Numero Invalido"<<endl;
+		 }
+		 system("pause");
+		 cout<<"Ingrese la opcion que corresponde: ";
+		 cin>>op4;
+		}while(op4<0 || op4>3);
+		system ("cls");
+		switch(op4)//opciones de cine la paz
+		{case 1:
+			{cout<<"*************** CINES ***************"<<endl;
+			do 
+			{do
+			 {cout<<"[1] Mega Center "<<endl;
+			  cout<<"[2] Cinemateca Boliviana "<<endl;
+			  cout<<"[3] Monje Campero "<<endl;
+			  cout<<"[4] Multicine "<<endl;
+			  cout<<"[5] Salir "<<endl;
+			  cout<<"Escoja una de las anteriores opciones: ";
+			  fflush(stdin);
+			  gets_s(numero);
+			  sw = validar_num(numero);
+			  if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				num = atoi(numero);
+				cout<<num;
+				}
+			  else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+			system("pause");
+			cout<<"Ingrese la opcion que corresponde: ";
+			cin>>op5;
+			 }while(op5<0 || op5>5);
+			 system ("cls");
+			 switch(op5)
+			 {case 1:
+				{cout<<"El  mega center se encuentra ubicado:"<<endl;
+				 cout<<"Ingreso a Irpavi (Zona Sur)"<<endl;
+				 cout<<"Los horarios disponibles no sufren modificaciones durante este mes"<<endl;
+				 //system("");
+				 break;
+				}
+			 case 2:
+				 {cout<<"Cinemateca Boliviana se encuentra ubicado:"<<endl;
+				 cout<<"calle Oscar Soria No. 110 (esq. Rosendo Gutiérrez)"<<endl;
+				 cout<<"Los horarios disponibles no sufren modificaciones durante este mes"<<endl;
+				 //system("");
+				 break;
+				 }
+			 case 3:
+				 {cout<<"El cine Monje Campero se encuentra ubicado:"<<endl;
+				 cout<<"Av. 16 de Julio #1495"<<endl;
+				 cout<<"Los horarios disponibles no sufren modificaciones durante este mes"<<endl;
+				 //system("");
+				 break;
+				 }
+			 case 4:
+				 {cout<<"El multicine se encuentra ubicado:"<<endl;
+				 cout<<"Av. Arce 2631"<<endl;
+				 cout<<"Los horarios disponibles no sufren modificaciones durante este mes"<<endl;
+				 //system("");
+				 break;
+				 }
+			 case 5:
+				 {cout<<"Salir"<<endl;
+				  break;
+				 }
+			 default: break;
+			 }
+			}while(op>5);
+			}//termina el menu principal del cine de lpz
+			
+		case 2:
+			{cout<<"*************** MUSEOS ***************"<<endl;
+			do
+			{do
+				{cout<<"[1] Museo Costumbrista Juan de Vargas"<<endl;
+				 cout<<"[2] Museo del Litoral Boliviano"<<endl;
+				 cout<<"[3] Museo de Metales Preciosos"<<endl;
+				 cout<<"[4] Museo Casa de Murillo"<<endl;
+				 cout<<"[5]  Museo de Instrumentos Musicales de Bolivia"<<endl;
+				 cout<<"[6]  Museo San Francisco"<<endl;
+				 cout<<"[7] Salir"<<endl;
+				 cout<<"Escoja una de las anteriores opciones: ";
+				 fflush(stdin);
+				 gets_s(numero);
+				 sw = validar_num(numero);
+				 if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				 num = atoi(numero);
+				 cout<<num;
+				}
+				else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+				system("pause");
+				cout<<"Ingrese la opcion que corresponde: ";
+				cin>>op6;
+				}while(op6<0 || op6>7);
+				system("cls");
+			switch(op6)
+				{case 1:
+					{cout<<"El Museo Costumbrista Juan de Vargas se encuentra: "<<endl;
+					 cout<<"Apolinar Jaén s/n ."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            martes-viernes:          *"<<endl;
+					 cout<<"*             09:30 - 12:30           *"<<endl;
+					 cout<<"*             15:00 - 19:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 2:
+					 {cout<<"El Museo del Litoral Boliviano se encuentra: "<<endl;
+					 cout<<"Apolinar Jaén 789."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            martes-viernes:          *"<<endl;
+					 cout<<"*             09:30 - 12:30           *"<<endl;
+					 cout<<"*             15:00 - 19:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 3:
+					  {cout<<"El Museo de Metales Preciosos se encuentra: "<<endl;
+					 cout<<" Apolinar Jaén 777."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            martes-viernes:          *"<<endl;
+					 cout<<"*             09:30 - 12:30           *"<<endl;
+					 cout<<"*             15:00 - 19:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 4:
+					  {cout<<"El Museo Casa de Murillo se encuentra: "<<endl;
+					  cout<<"Apolinar Jaén 790."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            martes-viernes:          *"<<endl;
+					 cout<<"*             09:30 - 12:30           *"<<endl;
+					 cout<<"*             15:00 - 19:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 5:
+					   {cout<<"El Museo de Instrumentos Musicales de Bolivia se encuentra: "<<endl;
+					   cout<<" Apolinar Jaén 711."<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-domingo:           *"<<endl;
+					 cout<<"*             09:30 - 18:30           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 6:
+					  {cout<<"El Museo San Francisco se encuentra: "<<endl;
+					  cout<<"Plaza San Francisco 503"<<endl;
+					 cout<<"**********HORARIO DE ATENCION**********"<<endl;
+					 cout<<"*            lunes-sabado:            *"<<endl;
+					 cout<<"*             09:00 - 18:00           *"<<endl;
+					 cout<<"***************************************"<<endl;
+					 break;
+					}
+				 case 7:
+					 {cout<<"Salir"<<endl;
+					 break;
+					 }
+				 default: break;
+
+				}
+			}while(op6>7);//termina el menu de museos de lpz
+			break;
+			}while(op6>3);
+		}
+	}while(op4>3);
+	}//termina toda la paz
+	case 3://empieza cbba
+		system("color 3F");
+		{cout<<"**************** COCHABAMBA ***************"<<endl;
+		do
+		{do
+		 {cout<<"[1] Cines"<<endl;
+		  cout<<"[2] Museos"<<endl;
+		  cout<<"[3] Salir"<<endl;
+		  cout<<"Escoja una de las anteriores opciones: ";
+				 fflush(stdin);
+				 gets_s(numero);
+				 sw = validar_num(numero);
+				 if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				 num = atoi(numero);
+				 cout<<num;
+				}
+				else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+				system("pause");
+				cout<<"Ingrese la opcion que corresponde: ";
+				cin>>op7;
+		 }while(op7<0 || op7>3);
+		 system("cls");
+		 switch(op7)
+		 {case 1://cine de cbba
+			{cout<<"*************** CINES ***************"<<endl;
+					 do
+					 {do
+					 {cout<<"[1] Cine Center "<<endl;
+					  cout<<"[2] Cine Norte "<<endl;
+					  cout<<"[3] Prime Cinema "<<endl;
+					  cout<<"[4] Salir "<<endl;
+					  cout<<"Escoja una de las anteriores opciones: ";
+					  fflush(stdin);
+					 gets_s(numero);
+					 sw = validar_num(numero);
+					 if (sw==0)
+					{cout<<"Numero invalido"<<endl;
+					num = atoi(numero);
+					cout<<num;
+					}
+					else
+					{
+					cout<<"Numero Invalido"<<endl;
+					}
+					system("pause");
+					cout<<"Ingrese la opcion que corresponde: ";
+					cin>>op9;
+					 }while(op9<0 || op9>4);
+					 system("cls");
+					 switch(op9)
+					 {case 1:
+						{cout<<"La direccion del Cine Center es:"<<endl;
+						 cout<<"Av. Ramon Rivero esq. Oquendo."<<endl;
+						 cout<<"Los horarios son fijos durante este mes: "<<endl;
+						 //system("");
+						 break;
+						}
+					 case 2:
+						 {cout<<"La direccion del Cine Norte es:"<<endl;
+						 cout<<"Av. D´orbigny esq. Melchor Pérez."<<endl;
+						 cout<<"Los horarios son fijos durante este mes: "<<endl;
+						 //system("");
+						 break;
+						 }
+					 case 3:
+						 {cout<<"La direccion del Prime Cinema es:"<<endl;
+						 cout<<"Av. Los Portales, Hupermall nivel 5."<<endl;
+						 cout<<"Los horarios son fijos durante este mes: "<<endl;
+						 //system("");
+						 break;
+						 }
+					 case 4:
+						 {cout<<"Salir"<<endl;
+						  break;
+						 }
+					 default: break;
+					 }
+					 }while(op9>4);
+					}//termina el cine
+				case 2:
+					{cout<<"*************** MUSEOS ***************"<<endl;
+					 do
+					 {do
+					 {cout<<"[1] Casa Museo Martin Cardenas"<<endl;
+					  cout<<"[2] Museo de la Medicina Francisco Viedma "<<endl;
+					  cout<<"[3] Casona de Mayorazgo "<<endl;
+					  cout<<"[4] Museo Casona Santivañez "<<endl;
+					  cout<<"[5] Museo Arqueologico de la UMSS"<<endl;
+					  cout<<"[6] Salir"<<endl;
+					  cout<<"Escoja una de las anteriores opciones: ";
+					  fflush(stdin);
+					  gets_s(numero);
+					  sw = validar_num(numero);
+					  if (sw==0)
+				   	 {cout<<"Numero invalido"<<endl;
+					  num = atoi(numero);
+					  cout<<num;
+					 }
+					else
+					{
+					cout<<"Numero Invalido"<<endl;
+					}
+					system("pause");
+					cout<<"Ingrese la opcion que corresponde: ";
+					cin>>op10;
+					 }while(op10<0 || op10>6);
+					 system("cls");
+					 switch(op10)
+					 {case 1:
+						{cout<<"La Casa Museo Martin Cardenas se encuentra: "<<endl;
+						cout<<"Av. Heroínas 266 entre Junín y Hamiraya."<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 12:00           *"<<endl;
+						cout<<"*             15:00 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					 case 2:
+						 {cout<<"El Museo de la Medicina Francisco Viedma se encuentra: "<<endl;
+						cout<<"Calle Oquendo y Venezuela ."<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             08:00 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						 }
+					 case 3:
+						 {cout<<"La Casona de Mayorazgo se encuentra: "<<endl;
+						cout<<"Av. Simón López esq. Av. Pérez de Holguín."<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 12:00           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						 }
+					 case 4:
+						 {cout<<"El Museo Casona Santivañez se encuentra: "<<endl;
+						cout<<"Calle Santivañez entre Av. Ayacucho y Junín."<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 12:00           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						 }
+					 case 5:
+						 {cout<<"El Museo Arqueologico de la UMSS se encuentra: "<<endl;
+						cout<<"Calle Nataniel Aguirre esq. Calle Jordán "<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             08:00 - 18:00           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						 }
+					 case 6:
+						 {cout<<"Salir"<<endl;
+						  break;
+						 }
+					 default: break;
+					 }
+					 }while(op10>6);
+					}
+				}
+			 }while(op7>3);
+		}//termina cochabamba
+		case 4:
+			system("color FC");
+			system("cls");
+			{cout<<"*************** SUCRE ***************"<<endl;
+			 do
+			 {do
+			  {cout<<"[1] Cines"<<endl;
+			   cout<<"[2] Museos"<<endl;
+		       cout<<"[3] Salir"<<endl;
+			   cout<<"Escoja una de las anteriores opciones: ";
+				 fflush(stdin);
+				 gets_s(numero);
+				 sw = validar_num(numero);
+				 if (sw==0)
+				{cout<<"Numero invalido"<<endl;
+				 num = atoi(numero);
+				 cout<<num;
+				}
+				else
+				{
+				cout<<"Numero Invalido"<<endl;
+				}
+				system("pause");
+				cout<<"Ingrese la opcion que corresponde: ";
+				cin>>op11;
+			  }while(op11<0 || op11>3);
+			  system("cls");
+			  switch(op11)
+			   {case 1:
+				{cout<<"*************** CINE ***************"<<endl;
+				 cout<<"La ciudad de sucre solo cuenta con un cine"<<endl;
+				 cout<<"es el CINE SAS se encuentra ubicado:"<<endl;
+				 cout<<"c. Pérez Nro. 331 (Central)"<<endl;
+				 cout<<"Sus horarios son fijos durante este mes"<<endl;
+				 //system("");
+				}
+			   case 2:
+				   {cout<<"*************** MUSEOS ***************"<<endl;
+				   do
+				   {do
+				    { cout<<"[1] Museo del Tesoro"<<endl;
+					  cout<<"[2] Museo Etnografia y Folklore "<<endl;
+					  cout<<"[3] Museo del Convento de la RECOLETA  "<<endl;
+					  cout<<"[4] Museo Colonial Charcas U. S. F. X. "<<endl;
+					  cout<<"[5] Casa de la Libertad"<<endl;
+					  cout<<"[6] Salir"<<endl;
+					  cout<<"Escoja una de las anteriores opciones: ";
+					  fflush(stdin);
+					  gets_s(numero);
+					  sw = validar_num(numero);
+					  if (sw==0)
+				   	 {cout<<"Numero invalido"<<endl;
+					  num = atoi(numero);
+					  cout<<num;
+					 }
+					else
+					{
+					cout<<"Numero Invalido"<<endl;
+					}
+					system("pause");
+					cout<<"Ingrese la opcion que corresponde: ";
+					cin>>op12;
+				    }while(op12<0 | op12>6);
+					system("cls");
+					switch(op12)
+					{case 1:
+						{cout<<"El Museo del Tesoro se encuentra: "<<endl;
+						cout<<"Plaza 25 de Mayo #59 Esquina norte Sucre"<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:          *"<<endl;
+						cout<<"*             09:30 - 12:30           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					case 2:
+						{cout<<"El Museo Etnografia y Folklore se encuentra: "<<endl;
+						cout<<"Espaňa #74"<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:          *"<<endl;
+						cout<<"*             09:30 - 12:30           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					case 3:
+						{cout<<"El Museo del Convento de la RECOLETA se encuentra: "<<endl;
+						cout<<"Polanco #162"<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 11:30           *"<<endl;
+						cout<<"*             14:30 - 17:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					case 4:
+						{cout<<"El Museo Colonial Charcas U. S. F. X. se encuentra: "<<endl;
+						cout<<" Bolivar #698"<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 12:30           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					case 5:
+						{cout<<"La Casa de la Libertad se encuentra: "<<endl;
+						cout<<"Plaza 25 de Mayo"<<endl;
+						cout<<"**********HORARIO DE ATENCION**********"<<endl;
+						cout<<"*            lunes-viernes:           *"<<endl;
+						cout<<"*             09:00 - 12:00           *"<<endl;
+						cout<<"*             14:30 - 18:30           *"<<endl;
+						cout<<"***************************************"<<endl;
+						break;
+						}
+					case 6:
+						{cout<<"Salir"<<endl;
+						break;
+						}
+					default : break;
+					}
+				   }while(op12>6);
+				   }
+			   }
+			 }while(op11>3);
+			}//termina sucre
+}
+ cout<<"Si desea continuar presione 1: "<<endl;
+ cin>>cont;
+}while(cont==1);
+ getch();
+}
+
+
+
+int validar_num(char numero[50])
+{
+	int i = 0, sw = 0, j;
+	j = strlen(numero);
+	while (i < j && sw == 0)
+	{
+		if (isdigit(numero[i]) != 0)
+			i++;
+		else
+			sw = 1;
+
+	}
+	return(sw);
+}
